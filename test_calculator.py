@@ -19,19 +19,22 @@ class TestCalculator(unittest.TestCase):
         expected_result = 2
         self.assertEqual(result, expected_result, f"Expected {expected_result}, got {result}")
 
-if __name__ == "__main__":
-    unittest.main()
-
     def test_multiply(self):
-           result = multiply(3, 4)
-           expected_result = 12
-           self.assertEqual(result, expected_result, f"Expected {expected_result}, got {result}")
+        """Тест умножения чисел."""
+        result = multiply(3, 4)
+        expected_result = 12
+        self.assertEqual(result, expected_result, f"Expected {expected_result}, got {result}")
 
     def test_divide(self):
-           result = divide(10, 2)
-           expected_result = 5
-           self.assertEqual(result, expected_result, f"Expected {expected_result}, got {result}")
+        """Тест деления чисел."""
+        result = divide(10, 2)
+        expected_result = 5
+        self.assertEqual(result, expected_result, f"Expected {expected_result}, got {result}")
 
     def test_divide_by_zero(self):
-           with self.assertRaises(ValueError):
-               divide(10, 0)
+        """Тест деления на ноль."""
+        with self.assertRaises(ValueError):
+            divide(10, 0)
+
+if __name__ == "__main__":
+    unittest.main()
